@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-set(LIB xclass)
+set(XCLASS_LIB xclass)
 
 set(SRCS ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set(INCS ${CMAKE_CURRENT_SOURCE_DIR}/inc)
@@ -14,11 +14,11 @@ set(XCLASS_INCLUDE_DIRECTORIES ${XCLASS_INCLUDE_DIRECTORIES} PARENT_SCOPE)
 set(XCLASS_LIBRARY_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR})
 set(XCLASS_LIBRARY_DIRECTORIES ${XCLASS_LIBRARY_DIRECTORIES} PARENT_SCOPE)
 
-set(XCLASS_LIBRARIES ${LIB})
-set(XCLASS_LIBRARIES ${XCLASS_LIBRARIES} PARENT_SCOPE)
+set(XCLASS_LIBRARIES ${XCLASS_LIB})
+set(XCLASS_LIBRARIES ${XCLASS_LIB} PARENT_SCOPE)
 
-# declare a target named ${LIB} with ${SRCS}
+# declare a target named ${XCLASS_LIB} with ${SRCS}
 # (must be done before setting properties on the target)
-add_library(${LIB} ${SRCS})
+add_library(${XCLASS_LIB} ${SRCS})
 
-set_target_properties(${LIB} PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(${XCLASS_LIB} PROPERTIES LINKER_LANGUAGE CXX)

@@ -14,4 +14,4 @@ add_executable(${APP} ${SOURCES})
 
 set_target_properties(${APP} PROPERTIES LINKER_LANGUAGE CXX)
 target_include_directories(${APP} PUBLIC ${INCS} ${XCLASS_INCLUDE_DIRECTORIES})
-target_link_libraries(${APP} xclass)
+target_link_libraries(${APP} ${XCLASS_LIBRARIES})
